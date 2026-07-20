@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+class Citymangement
+{
+public static void main(String args[])
+{
+ArrayList<String>cities=new ArrayList<>();
+Scanner sc=new Scanner(System.in);
+cities.add("Amathur");
+cities.add("Kovilpatti");
+cities.add("Madurai");
+cities.add("Chennai");
+System.out.println("ArrayList:"+cities);
+cities.add(2,"Salam");
+System.out.println("Cities after inserting Salem at index 2:"+cities);
+System.out.println("\nEnter a city name to search:");
+String searchCity=sc.nextLine();
+if(cities.contains(searchCity))
+{
+System.out.println(searchCity +"is present in this list");
+}
+else
+{
+System.out.println(searchCity+"is not present in this list");
+}
+System.out.println("Enter a starting letter:");
+String letter=sc.nextLine();
+System.out.println("Cities starting with "+letter+":");
+for(String city:cities)
+{
+if(city.toUpperCase().startsWith(letter.toUpperCase()))
+{
+System.out.println(city);
+}
+}
+sc.close();
+}
+}
+
+
+
+OUTPUT
+
+
+ArrayList:[Amathur, Kovilpatti, Madurai, Chennai]
+Cities after inserting Salem at index 2:[Amathur, Kovilpatti, Salam, Madurai, Chennai]
+
+Enter a city name to search:
+Amathur
+Amathuris present in this list
+Enter a starting letter:
+A
+Cities starting with A:
+Amathur
+
+=== Code Execution Successful ===
